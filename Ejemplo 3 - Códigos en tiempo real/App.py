@@ -9,6 +9,7 @@ def read_barcodes(frame):
         print(x, y)
         barcode_text = barcode.data.decode('utf-8')
         print(barcode_text)
+        #print(barcode_text, x, y, "")
         cv2.rectangle(frame, (x, y),(x+w, y+h), (0, 255, 0), 2)
     return frame
 
