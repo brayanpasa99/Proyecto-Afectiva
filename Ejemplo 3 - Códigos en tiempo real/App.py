@@ -6,9 +6,9 @@ def read_barcodes(frame):
     barcodes = pyzbar.decode(frame, symbols=[ZBarSymbol.CODE128])
     for barcode in barcodes:
         x, y , w, h = barcode.rect
-        print(x, y)
+        print (x, y),
         barcode_text = barcode.data.decode('utf-8')
-        print(barcode_text)
+        print (barcode_text),
         #print(barcode_text, x, y, "")
         cv2.rectangle(frame, (x, y),(x+w, y+h), (0, 255, 0), 2)
     return frame
