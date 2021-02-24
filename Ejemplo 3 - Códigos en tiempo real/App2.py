@@ -3,7 +3,7 @@ import numpy as np
 import cv2
  
 #Inicializar la camara 0 para la camara del portatil y 1 para la webcam
-capture = cv2.VideoCapture(1)
+capture = cv2.VideoCapture(2)
  
 while 1:
     #Capturar un frame
