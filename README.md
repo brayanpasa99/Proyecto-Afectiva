@@ -16,9 +16,9 @@ Este será el principal del proyecto y contiene el código usado para la impleme
 
 Lo principal es la función ***main()***:
 
-'''
+```python
 {
     if path.exists("data.txt"):
         remove('data.txt')
-}        
-'''
+}
+```
