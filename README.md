@@ -10,7 +10,9 @@ También, se encuentra un [archivo .docx](https://github.com/brayanpasa99/Proyec
 
 Igualmente, encontrará cada uno de los enlaces a las diferentes imágenes de los códigos de barras.
 
-# Archivo App.py
+# Archivo [App.py](https://github.com/brayanpasa99/Proyecto-Afectiva/blob/main/App.py)
 
-Este será el principal del proyecto y contiene el código usado para la implementación del mismo, se explica este más a fondo:
+Este será el principal del proyecto y contiene el código usado para la implementación del mismo, se explica este más a fondo en el archivo [AppREADME.md](https://github.com/brayanpasa99/Proyecto-Afectiva/blob/main/AppREADME.md)
+
+
 
