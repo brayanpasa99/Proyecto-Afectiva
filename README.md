@@ -14,5 +14,7 @@ Igualmente, encontrará cada uno de los enlaces a las diferentes imágenes de lo
 
 Este será el principal del proyecto y contiene el código usado para la implementación del mismo, se explica este más a fondo en el archivo [AppREADME.md](https://github.com/brayanpasa99/Proyecto-Afectiva/blob/main/AppREADME.md).
 
+Allí se dará una explicación detallada de las diferentes funciones y los parámetros que se deben o se pueden alterar para el funcionamiento del programa.
+
 
 
