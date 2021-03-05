@@ -20,6 +20,7 @@ Lo principal es la función ***main()***, la cual contiene:
 
 ```python
 {
+    #Verifica si existe el archivo data.txt y de ser así lo borra.
     if path.exists("data.txt"):
         remove('data.txt')
 }
@@ -29,8 +30,12 @@ Lo principal es la función ***main()***, la cual contiene:
 
 ```python
 {
+    #Instancia de la clase Captura_codigos
     Capturar = Captura_codigos()
+    '''Orden de activación a la cámara, el número 2 puede variar desde 0
+    depende la fuente de video.'''
     camera = cv2.VideoCapture(2)
+    #Captura de parámetros de la cámara.
     ret, frame = camera.read()
 }
 ```
