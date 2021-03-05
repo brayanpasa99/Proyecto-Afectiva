@@ -4,8 +4,8 @@ Este se da con la instrucción que busca la función `main()` en el archivo para
 
 ```python
 {
-if __name__ == '__main__':
-    main()
+    if __name__ == '__main__':
+        main()
 }
 ```
 
