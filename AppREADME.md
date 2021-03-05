@@ -10,7 +10,7 @@ Lo principal es la función ***main()***, la cual contiene:
 }
 ```
 
-2. La creación de la instancia de la clase ***Captura_codigos*** que será la que contenga el resto del programa, siguiente de ella se tiene una línea que especifica la fuente de video que va a detectar el programa; en este caso se usa 2 debido a que corresponde a la activación de la cámara conectada al puerto USB, sin embargo, se debe configurar cambiando los números desde el 0 hasta que se de la orden de activación de la cámara donde se quiere implementar el programa; por último, se toman los parámetros de lectura de la cámara.
+2. La creación de la instancia de la clase `Captura_codigos` que será la que contenga el resto del programa, siguiente de ella se tiene una línea que especifica la fuente de video que va a detectar el programa; en este caso se usa `2` debido a que corresponde a la activación de la cámara conectada al puerto USB, sin embargo, se debe configurar cambiando los números desde el 0 hasta que se de la orden de activación de la cámara donde se quiere implementar el programa; por último, se toman los parámetros de lectura de la cámara.
 
 ```python
 {
