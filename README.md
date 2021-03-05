@@ -8,3 +8,17 @@ En esta carpeta se encuentra un [archivo .zip](https://github.com/brayanpasa99/P
 
 También, se encuentra un [archivo .docx](https://github.com/brayanpasa99/Proyecto-Afectiva/blob/main/Generaci%C3%B3n%20c%C3%B3digos/Codigos1a10.docx) que fue el de referencia para hacer la impresión de los códigos en los diferentes tamaños usados. Se tiene que las primeras tres líneas del archivo son las que presentan mejores resultados, siendo la primera la usada en las pruebas hasta el momento.
 
+Igualmente, encontrará cada uno de los enlaces a las diferentes imágenes de los códigos de barras.
+
+# Archivo App.py
+
+Este será el principal del proyecto y contiene el código usado para la implementación del mismo, se explica este más a fondo:
+
+Lo principal es la función ***main()***:
+
+'''
+{
+    if path.exists("data.txt"):
+        remove('data.txt')
+}        
+'''
