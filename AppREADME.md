@@ -1,3 +1,5 @@
+# Función `main()`
+
 Lo principal es la función `main()`, la cual contiene:
 
 1. Una instrucción para **borrar** en caso de que exista, el archivo **data.txt** que será el que almacena la posición de los códigos de barras como salida del programa.
