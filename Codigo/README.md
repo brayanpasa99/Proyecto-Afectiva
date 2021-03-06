@@ -12,7 +12,7 @@
 ### 4. [Inicio del programa](#Inicio-del-programa "Inicio del programa")
 ### 5. [Función `main()`](#Función-main "Función main")
 ### 6. [Clase `Captura_codigos`](#Clase-Captura_codigos "Captura códigos")
-### >    a. [Función `read_barcodes(self, frame)`](#Función-read_barcodesself-frame "Función read_barcodes")
+###      a. [Función `read_barcodes(self, frame)`](#Función-read_barcodesself-frame "Función read_barcodes")
 
 ---
 
