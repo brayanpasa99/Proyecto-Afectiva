@@ -195,3 +195,40 @@ iv. En este punto, se almacena cada uno de los datos en el diccionario `dato_coo
         #Se hace un retorno del marco actual.
 }
 ```
+
+### Función `ordena(self, coor)`
+
+i. Esta función realizará el proceso de ordenamiento de las coordenadas en x y de las claves o llaves del diccionario para hacer una impresión certera en el archivo final, recibe como parámetros el atributo por defecto `self` y un diccionario de coordenadas que se obtiene en procesos anteriores `coor`. Lo princial es inicializar un diccionario `coor_x` vacío que va a contener las claves y las coordenadas en x de cada uno de los códigos decodificados, después se genera un ciclo que hace que todas las claves en el diccionario `coor` pasen a ser las claves del diccionario `coor_x` y que los datos asociados a ellas sean los valores de las coordenadas en x de cada uno de los códigos.
+
+```python
+{
+
+    #Se define la función que ordena el las coordenadas de los bloques.
+    def ordena(self, coor):
+        #Se inicializa un diccionario que va a contener las coordenadas en x del diccionario recibido. 
+        coor_x = {}
+
+        #Se construye un arreglo que va a recorrer el diccionario obtenido, asignando el valor como clave
+        #el valor de la clave del diccionario principal y como dato asociado el valor de coordenada en x respectivo.
+        for key in coor:
+            coor_x[key]=coor[key][0]
+}
+```
+
+ii. El diccionario `coor_x` obtenido antes será dividido en dos arreglos `valores` y `llaves` que contendrán los reespectivos datos asociados y las llaves de cada uno de los datos en el diccionario. Siguiente a ello se hace un llamado a la función [`selectionSort`](#Función-selectionSortselfvListllList "Función selectionSort") con los parámetros de llaves y valores obtenidos antes, quedando así `selectionSort(valores, llaves)`; como se mencionará más adelante esta función contiene el algoritmo para ordenar a la par los vectores de clave y valor según las coordenadas en x.
+
+```python
+{
+
+
+        #El diccionario de coordenadas se divide en dos arreglos para el ordenamiento que contienen los valores
+        #separados de las claves para que sea más fácil ordenarlos.
+        valores = coor_x.values()
+        llaves = coor_x.keys()
+
+        #Se acude a la función que contiene el algoritmo para ordenar, enviando las claves
+        #y los valores correspondientes a ser ordenados.
+        ordenados = self.selectionSort(valores, llaves)
+        
+}
+```
