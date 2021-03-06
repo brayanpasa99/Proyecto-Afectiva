@@ -5,16 +5,16 @@
 
 ---
 
-# Tabla de Contenido
-1. [Preliminares](#Preliminares "Preliminares")
-2. [Librerías](#Librerías "Librerías")
-3. [Variables globales](#Variables-globales "Variables globales")
-4. [Inicio del programa](#Inicio-del-programa "Inicio del programa")
-5. [Función `main()`](#Función-main "Función main")
+## Tabla de Contenido
+### 1. [Preliminares](#Preliminares "Preliminares")
+### 2. [Librerías](#Librerías "Librerías")
+### 3. [Variables globales](#Variables-globales "Variables globales")
+### 4. [Inicio del programa](#Inicio-del-programa "Inicio del programa")
+### 5. [Función `main()`](#Función-main "Función main")
 
 ---
 
-# Preliminares
+## Preliminares
 
 El siguiente segmento de código será para no tener ninguna clase de problema con los acentos o caracteres especiales que se encuentren en el programa.
 
@@ -26,7 +26,7 @@ El siguiente segmento de código será para no tener ninguna clase de problema c
 }
 ```
 
-# Librerías
+## Librerías
 
 La siguiente es la sección de importaciones de las librerías usadas en el programa. La librería `cv2` y `pyzbar` permitiran hacer la carpura de video en tiempo real con la cámara y el tratamiento de los códigos de barras respectivamente; por otro lado, la librería `remove` y `path` servirán para hacer la creación de un archivo nuevo cada vez que se inicie el programa.
 
@@ -43,7 +43,7 @@ La siguiente es la sección de importaciones de las librerías usadas en el prog
 }
 ```
 
-# Variables globales
+## Variables globales
 
 Se decide vincular la variable `NUM_BLOQUES` a diferentes segmentos del código con el fin de generar una posible ampliación de los códigos leídos por el programa, en este caso será igual a `2`, se recomienda que sea no superior a `4`.
 
@@ -54,7 +54,7 @@ Se decide vincular la variable `NUM_BLOQUES` a diferentes segmentos del código 
 }
 ```
 
-# Inicio del programa 
+## Inicio del programa 
 
 Este se da con la instrucción que busca la función `main()` en el archivo para poder ejecutarla.
 
@@ -66,7 +66,7 @@ Este se da con la instrucción que busca la función `main()` en el archivo para
 }
 ```
 
-# Función `main()`
+## Función `main()`
 
 Lo principal es la función `main()`, la cual contiene:
 
