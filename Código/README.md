@@ -1,5 +1,9 @@
 # Tabla de Contenido
-1. [Preliminares](#Preliminares)
+1. [Preliminares](#Preliminares "Preliminares")
+2. [Librerías](#Librerías "Librerías")
+3. [Variables globales](#Variables-globales "Variables globales")
+4. [Inicio del programa](#Inicio-del-programa "Inicio del programa")
+5. [Función `main()`](#Función-`main()` "Función main")
 
 ---
 
