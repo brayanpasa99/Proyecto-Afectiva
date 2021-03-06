@@ -139,7 +139,7 @@ Lo principal es la función `main()`, la cual contiene:
 
 2. La función `read_barcodes(self, frame)` presentada a continuación:
 
-a. ### Función `read_barcodes(self, frame)`
+### Función `read_barcodes(self, frame)`
 
 i. Esta contiene la variable que almacena todos los códigos de barras de la lectura que se nombra como `barcodes`, se hace uso de la librería `pyzbar` para hacer la decodificación correspondiente y se usan como parámetros el marco obtenido de la lectura en tiempo real (`frame`) y el atributo `symbols=[ZBarSymbol.CODE128]` que permite la lectura de solamente el tipo de códigos de barras que se están usando, lo cual mejora el reconocimiento y desempeño del programa. **En caso de leer otro tipo de códigos de barras se tendrá que cambiar el atributo symbols por la propiedad correspondiente.**
 
