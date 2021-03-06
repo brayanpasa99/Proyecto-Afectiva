@@ -1,6 +1,10 @@
 # Proyecto Afectiva - Colaboración Grupo VIRTUS
 > Brayan Alexander Paredes Sánchez
 
+## Carpeta Código
+
+La carpeta principal del proyecto es: [Proyecto Afectiva](https://github.com/brayanpasa99/Proyecto-Afectiva)
+
 ## Documentación código
 
 ---
