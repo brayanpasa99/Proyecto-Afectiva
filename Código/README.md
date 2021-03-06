@@ -3,7 +3,7 @@
 2. [Librerías](#Librerías "Librerías")
 3. [Variables globales](#Variables-globales "Variables globales")
 4. [Inicio del programa](#Inicio-del-programa "Inicio del programa")
-5. [Función `main()`](#Función `main()` "Función main")
+5. [Función `main()`](#Función-main() "Función main")
 
 ---
 
