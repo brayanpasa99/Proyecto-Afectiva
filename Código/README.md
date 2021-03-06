@@ -12,6 +12,7 @@
 ### 4. [Inicio del programa](#Inicio-del-programa "Inicio del programa")
 ### 5. [Función `main()`](#Función-main "Función main")
 ### 6. [Clase `Captura_codigos`](#Clase-Captura_codigos "Captura códigos")
+###     a. [Función `read_barcodes(self, frame)`](#Función-read_barcodesself-frame "Función read_barcodes")
 
 ---
 
@@ -138,9 +139,9 @@ Lo principal es la función `main()`, la cual contiene:
 
 2. La función `read_barcodes(self, frame)` presentada a continuación:
 
-### Función `read_barcodes(self, frame)`
+a. ### Función `read_barcodes(self, frame)`
 
-a. Esta contiene la variable que almacena todos los códigos de barras de la lectura que se nombra como `barcodes`, se hace uso de la librería `pyzbar` para hacer la decodificación correspondiente y se usan como parámetros el marco obtenido de la lectura en tiempo real (`frame`) y el atributo `symbols=[ZBarSymbol.CODE128]` que permite la lectura de solamente el tipo de códigos de barras que se están usando, lo cual mejora el reconocimiento y desempeño del programa. **En caso de leer otro tipo de códigos de barras se tendrá que cambiar el atributo symbols por la propiedad correspondiente.**
+i. Esta contiene la variable que almacena todos los códigos de barras de la lectura que se nombra como `barcodes`, se hace uso de la librería `pyzbar` para hacer la decodificación correspondiente y se usan como parámetros el marco obtenido de la lectura en tiempo real (`frame`) y el atributo `symbols=[ZBarSymbol.CODE128]` que permite la lectura de solamente el tipo de códigos de barras que se están usando, lo cual mejora el reconocimiento y desempeño del programa. **En caso de leer otro tipo de códigos de barras se tendrá que cambiar el atributo symbols por la propiedad correspondiente.**
 
 ```python
 {
@@ -151,7 +152,7 @@ a. Esta contiene la variable que almacena todos los códigos de barras de la lec
 }
 ```
 
-b. Siguiente a ello, siempre que se entra a la función se limpia el diccionario `dato_coordenada` para no tener problemas con los datos almacenados antes. Siguiente a ello se encuentra un ciclo que permitirá extraer las coordenadas que conforman el triángulo del código de barras definidas como el inicio de la coordenada en y (`y`), el inicio de la coordenada en x (`x`), el alto del rectángulo (`h`) y el ancho del rectángulo (`w`), para cada uno de los códigos esas coordenadas estarán guardadas en el atributo `rect` de cada elemento en el arreglo `barcodes` extrayendose gracias a la instrucción `barcode.rect`.
+ii. Siguiente a ello, siempre que se entra a la función se limpia el diccionario `dato_coordenada` para no tener problemas con los datos almacenados antes. Siguiente a ello se encuentra un ciclo que permitirá extraer las coordenadas que conforman el triángulo del código de barras definidas como el inicio de la coordenada en y (`y`), el inicio de la coordenada en x (`x`), el alto del rectángulo (`h`) y el ancho del rectángulo (`w`), para cada uno de los códigos esas coordenadas estarán guardadas en el atributo `rect` de cada elemento en el arreglo `barcodes` extrayendose gracias a la instrucción `barcode.rect`.
 
 ```python
 {
@@ -164,7 +165,7 @@ b. Siguiente a ello, siempre que se entra a la función se limpia el diccionario
 }
 ```
 
-c. Continuando el proceso, se hace uso de la instrucción `barcode.data.decode('utf-8')` con el fin de asignar el valor leído del código de barras a la variable `barcode_text`. Después se hace uso de la librería `cv2` con el atributo `rectangle` para enviar los parámetros del rectángulo dibujado en pantalla al reconocer los códigos de barras, los parámetros de la instrucción `cv2.rectangle(frame, (x, y),(x+w, y+h), (0, 255, 0), 2)` se componene respectivamente del marco en cuestión, el punto de inicio del rectángulo, el punto final del rectángulo, el color (dado como un grupo de datos RGB) y el grosor de la línea en pixeles, **todos los parámetros son modificables dependiendo de las necesidades.** 
+iii. Continuando el proceso, se hace uso de la instrucción `barcode.data.decode('utf-8')` con el fin de asignar el valor leído del código de barras a la variable `barcode_text`. Después se hace uso de la librería `cv2` con el atributo `rectangle` para enviar los parámetros del rectángulo dibujado en pantalla al reconocer los códigos de barras, los parámetros de la instrucción `cv2.rectangle(frame, (x, y),(x+w, y+h), (0, 255, 0), 2)` se componene respectivamente del marco en cuestión, el punto de inicio del rectángulo, el punto final del rectángulo, el color (dado como un grupo de datos RGB) y el grosor de la línea en pixeles, **todos los parámetros son modificables dependiendo de las necesidades.** 
 
 ```python
 {
@@ -178,7 +179,7 @@ c. Continuando el proceso, se hace uso de la instrucción `barcode.data.decode('
 }
 ```
 
-d. En este punto, se almacena cada uno de los datos en el diccionario `dato_coordenada` donde se considera que la clave es el valor de lo almacenado en `barcode_text` y los datos asociados son el punto central del rectángulo construido con las coordenadas `x, y, w, h` obtenidas antes. También, se crea un condicional que verifica si el diccionario `dato_coordenada` no está vacío y si además la longitud de datos que contiene es igual al número de bloque esperado, dado por `NUM_BLOQUES`, esto con el fin de que al realizar el cambio de los bloques no se generen datos intermedios innecesarios, si las condiciones anteriores se cumplen, se envían los datos en `dato_coordenada` para su ordenamiento. Finalmente, se retorna el marco actual definido como `frame`.
+iv. En este punto, se almacena cada uno de los datos en el diccionario `dato_coordenada` donde se considera que la clave es el valor de lo almacenado en `barcode_text` y los datos asociados son el punto central del rectángulo construido con las coordenadas `x, y, w, h` obtenidas antes. También, se crea un condicional que verifica si el diccionario `dato_coordenada` no está vacío y si además la longitud de datos que contiene es igual al número de bloque esperado, dado por `NUM_BLOQUES`, esto con el fin de que al realizar el cambio de los bloques no se generen datos intermedios innecesarios, si las condiciones anteriores se cumplen, se envían los datos en `dato_coordenada` para su ordenamiento. Finalmente, se retorna el marco actual definido como `frame`.
 
 ```python
 {
