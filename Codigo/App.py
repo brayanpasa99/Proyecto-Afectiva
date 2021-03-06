@@ -11,7 +11,7 @@ from os import remove
 from os import path
 
 #Variable vinculada al número de bloques que se espera leer en el programa, se recomienda no superior a 4.
-NUM_BLOQUES = 2
+NUM_BLOQUES = 3
 
 class Captura_codigos:
     
