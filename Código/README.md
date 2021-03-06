@@ -1,3 +1,10 @@
+# Proyecto Afectiva - Colaboración Grupo VIRTUS
+> Brayan Alexander Paredes Sánchez
+
+## Documentación código
+
+---
+
 # Tabla de Contenido
 1. [Preliminares](#Preliminares "Preliminares")
 2. [Librerías](#Librerías "Librerías")
