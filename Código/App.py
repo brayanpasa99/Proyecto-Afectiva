@@ -1,8 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import cv2
 from pyzbar import pyzbar
 from pyzbar.pyzbar import ZBarSymbol
 import operator
-import numpy as np
 from os import remove
 from os import path
 
@@ -16,8 +18,6 @@ class Captura_codigos:
         self.current_positions={}
         self.cadena=""
 
-    '''Llenar la primera vez el vector inicial de posiciones y luego hacer comparaciones
-    antes de reemplazar los datos en el vector'''
     def read_barcodes(self, frame):
         barcodes = pyzbar.decode(frame, symbols=[ZBarSymbol.CODE128])
         self.dato_coordenada={}
@@ -27,7 +27,7 @@ class Captura_codigos:
             cv2.rectangle(frame, (x, y),(x+w, y+h), (0, 255, 0), 2)   
             self.dato_coordenada[barcode_text]=x+(w/2), y+(h/2)
 
-        if(len(self.dato_coordenada)>0):
+        if(len(self.dato_coordenada)>0 and len(self.dato_coordenada)==NUM_BLOQUES):
             self.ordena(self.dato_coordenada)
 
         return frame
@@ -73,22 +73,23 @@ class Captura_codigos:
         [V[y], LL[y]] = temp
 
     def appendText(self, cadena):
-        #archivo-salida.py
-        # archivo-apendice.py
 
         f = open('data.txt','a')
         f.write('\n' + cadena)
         f.close()
 
-    #def guarda_coordenadas(self, barcode_text, coordenadas)
-
 def main():
 
+    #Verifica si existe el archivo data.txt y de ser así lo borra.
     if path.exists("data.txt"):
         remove('data.txt')
 
+    #Instancia de la clase Captura_codigos
     Capturar = Captura_codigos()
+    '''Orden de activación a la cámara, el número 2 puede variar desde 0
+    depende la fuente de video.'''
     camera = cv2.VideoCapture(2)
+    #Captura de parámetros de la cámara.
     ret, frame = camera.read()
     while ret:
         ret, frame = camera.read()
