@@ -1,3 +1,38 @@
+# Preliminares
+
+El siguiente segmento de código será para no tener ninguna clase de problema con los acentos o caracteres especiales que se encuentren en el programa.
+
+```python
+{
+    #!/usr/bin/env python
+    # -*- coding: utf-8 -*-
+}
+```
+
+# Librerías
+
+La siguiente es la sección de importaciones de las librerías usadas en el programa. La librería `cv2` y `pyzbar` permitiran hacer la carpura de video en tiempo real con la cámara y el tratamiento de los códigos de barras respectivamente; por otro lado, la librería `remove` y `path` servirán para hacer la creación de un archivo nuevo cada vez que se inicie el programa.
+
+```python
+{
+    import cv2
+    from pyzbar import pyzbar
+    from pyzbar.pyzbar import ZBarSymbol
+    from os import remove
+    from os import path
+}
+```
+
+# Variables globales
+
+Se decide vincular la variable `NUM_BLOQUES` a diferentes segmentos del código con el fin de generar una posible ampliación de los códigos leídos por el programa, en este caso será igual a `2`, se recomienda que sea no superior a `4`.
+
+```python
+{
+    NUM_BLOQUES = 2
+}
+```
+
 # Inicio del programa 
 
 Este se da con la instrucción que busca la función `main()` en el archivo para poder ejecutarla.
