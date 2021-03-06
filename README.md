@@ -4,9 +4,7 @@
 
 # Introducción
 
-El proyecto tiene como objetivo obtener un mapa o patrón de comportamiento en la solución del juego de Bloques en Línea, enfocado a niños de primera infancia. Para ello se implementa en el lenguaje de programación Python las librerías OpenCv y PyZbar, con el fin de hacer el reconocimiento en tiempo real y por medio de la captura de video, de códigos de barras que identifiquen a los diferentes bloques, lo anterior en la búsqueda de obtener las posiciones de los diferentes bloques en la coordenada horizontal e identificar cambios en su posición que permita imprimir un archivo con los cambios de posición de los diferentes bloques.
-
-El proyecto se trata del reconocimiento en tiempo real de códigos de barras para la obtención de datos que van a permitir 
+El proyecto tiene como objetivo obtener un mapa o patrón de comportamiento en la solución del juego de Bloques en Línea, enfocado a niños de primera infancia. Para ello se implementa en el lenguaje de programación `Python` las librerías `OpenCv` y `PyZbar`, con el fin de hacer el reconocimiento en tiempo real y por medio de la captura de video, de códigos de barras que identifiquen a los diferentes bloques, lo anterior en la búsqueda de obtener las posiciones de los diferentes bloques en la coordenada horizontal e identificar cambios en su posición que permita imprimir un archivo con los cambios de posición de los diferentes bloques.
 
 # Carpeta [Generación Códigos](https://github.com/brayanpasa99/Proyecto-Afectiva/tree/main/Generaci%C3%B3n%20c%C3%B3digos)
 
