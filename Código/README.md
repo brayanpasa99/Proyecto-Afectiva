@@ -1,3 +1,8 @@
+# Tabla de Contenido
+1. [Preliminares](#Preliminares)
+
+---
+
 # Preliminares
 
 El siguiente segmento de código será para no tener ninguna clase de problema con los acentos o caracteres especiales que se encuentren en el programa.
