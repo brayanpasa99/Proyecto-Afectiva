@@ -215,7 +215,7 @@ i. Esta función realizará el proceso de ordenamiento de las coordenadas en x y
 }
 ```
 
-ii. El diccionario `coor_x` obtenido antes será dividido en dos arreglos `valores` y `llaves` que contendrán los reespectivos datos asociados y las llaves de cada uno de los datos en el diccionario. Siguiente a ello se hace un llamado a la función [`selectionSort`](#Función-selectionSortselfvListllList "Función selectionSort") con los parámetros de llaves y valores obtenidos antes, quedando así `selectionSort(valores, llaves)`; como se mencionará más adelante esta función contiene el algoritmo para ordenar a la par los vectores de clave y valor según las coordenadas en x.
+ii. El diccionario `coor_x` obtenido antes será dividido en dos arreglos `valores` y `llaves` que contendrán los reespectivos datos asociados y las llaves de cada uno de los datos en el diccionario. Siguiente a ello se hace un llamado a la función [`selectionSort`](#Función-selectionsortself-vlist-lllist "Función selectionSort") con los parámetros de llaves y valores obtenidos antes, quedando así `selectionSort(valores, llaves)`; como se mencionará más adelante esta función contiene el algoritmo para ordenar a la par los vectores de clave y valor según las coordenadas en x.
 
 ```python
 {
@@ -264,7 +264,7 @@ i. Como se mencionó antes, esta función contiene el algoritmo de ordenamiento 
 
 ```python
 {
-    
+
     #Función que contiene el algoritmo de ordenamiento
     def selectionSort(self, vList, llList):
         #Proceso iterativo sobre el arreglo de valores
