@@ -83,15 +83,23 @@ class Captura_codigos:
             self.cadena = nueva_cadena
             self.appendText(self.cadena)
 
+    #Función que contiene el algoritmo de ordenamiento
     def selectionSort(self, vList, llList):
+        #Proceso iterativo sobre el arreglo de valores
         for i in range(len(vList)):
+            #Asignación de índice a comparar
             least = i
+            #Proceso iterativo para la verificación con los demás datos del arreglo
             for k in range(i+1, len(vList)):
+                #Comparación con los siguientes datos y guardar el índice en caso de que se encuentre un dato menor
                 if vList[k] < vList[least]:
                     least = k
                     
+            '''Llamado a la función con los arreglos de valores y llaves, además, con las posiciones para hacer los
+            respectivos cambios'''
             self.swap(vList, llList, least, i)
 
+            #Retorno de los arreglos ordenados
             return [vList, llList]
             
     def swap(self, V, LL, x, y):

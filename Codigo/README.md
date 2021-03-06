@@ -258,5 +258,36 @@ iii. Lo siguiente es inicializar una cadena nueva que va a contener el renglón 
 }
 ```
 
+### Función `selectionSort(self, vList, llList)`
 
+i. Como se mencionó antes, esta función contiene el algoritmo de ordenamiento que se usó para efectuar el proceso sobre las claves con respecto en las coordenadas. La función recibe el parámetro predeterminado `self`, el arreglo de valores y el arreglo de llaves extraídos que se envían como parámetros desde la función [`ordena`](#Función-ordenaselfcoor "Función ordena"), denominados `vList` y `llList`. Esta función ejecuta un proceso iterativo con un total de iteraciones igual a la longitud del archivo de valores, `len(vList)`, y lo que hace es verificar que el dato en la posición `i` sea el menor de todos los datos delante de él, si es así se guarda el índice `k` de la posición del dato que es menor y se llama a la función [`swap`](#Función-swapselfVLLxy "Función swap") que se encargará de realizar el cambio respectivo de posiciones. Finalmente, se retorna un arreglo con los datos de los valores y las claves ordenados.
+
+```python
+{
+    
+    #Función que contiene el algoritmo de ordenamiento
+    def selectionSort(self, vList, llList):
+        #Proceso iterativo sobre el arreglo de valores
+        for i in range(len(vList)):
+            #Asignación de índice a comparar
+            least = i
+            #Proceso iterativo para la verificación con los demás datos del arreglo
+            for k in range(i+1, len(vList)):
+                #Comparación con los siguientes datos y guardar el índice en caso de que se encuentre un dato menor
+                if vList[k] < vList[least]:
+                    least = k
+                    
+            '''Llamado a la función con los arreglos de valores y llaves, además, con las posiciones para hacer los
+            respectivos cambios'''
+            self.swap(vList, llList, least, i)
+
+            #Retorno de los arreglos ordenados
+            return [vList, llList]
+
+}
+```
+
+### Función `swap(self, V, LL, x, y)`
+
+### Función `appendText(self, cadena)`
 
