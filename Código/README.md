@@ -4,6 +4,7 @@ El siguiente segmento de código será para no tener ninguna clase de problema c
 
 ```python
 {
+    #La siguiente instrucción sirve para no tener problemas con los acentos o caracteres especiales del lenguaje natural.
     #!/usr/bin/env python
     # -*- coding: utf-8 -*-
 }
@@ -15,9 +16,12 @@ La siguiente es la sección de importaciones de las librerías usadas en el prog
 
 ```python
 {
+    #La siguiente librería permite hacer la lectura de códigos en tiempo real.
     import cv2
+    #La librería a continuación permite hacer el tratamiento de los diferentes códigos de barras.
     from pyzbar import pyzbar
     from pyzbar.pyzbar import ZBarSymbol
+    #Las siguientes librerías permiten ubicar y remover el archivo data.txt si existe previamente.
     from os import remove
     from os import path
 }
@@ -29,6 +33,7 @@ Se decide vincular la variable `NUM_BLOQUES` a diferentes segmentos del código 
 
 ```python
 {
+    #Variable vinculada al número de bloques que se espera leer en el programa, se recomienda no superior a 4.
     NUM_BLOQUES = 2
 }
 ```
@@ -39,6 +44,7 @@ Este se da con la instrucción que busca la función `main()` en el archivo para
 
 ```python
 {
+    #Instrucción principal para la ejecución del programa con la función main()
     if __name__ == '__main__':
         main()
 }
@@ -76,10 +82,12 @@ Lo principal es la función `main()`, la cual contiene:
 
 ```python
 {
+    #Ciclo que se ejecuta mientras la cámara esté disponible y solo se detiene al presionar la tecla ESC.
     while ret:
         ret, frame = camera.read()
         frame = Capturar.read_barcodes(frame)
         cv2.imshow('Barcode reader', frame)
+        #Condicional para leer la tecla ESC y abandonar el programa.
         if cv2.waitKey(1) & 0xFF == 27:
             break
 }
@@ -89,7 +97,9 @@ Lo principal es la función `main()`, la cual contiene:
 
 ```python
 {
+    #Se finaliza la lectura de la cámara.
     camera.release()
+    #Se destruyen todas las ventanas creadas.
     cv2.destroyAllWindows()
 }
 ```
