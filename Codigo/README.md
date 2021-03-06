@@ -289,5 +289,38 @@ i. Como se mencionó antes, esta función contiene el algoritmo de ordenamiento 
 
 ### Función `swap(self, V, LL, x, y)`
 
+i. Esta función se encarga de realizar el cambio correspondiente en las posiciones de los arreglos de valores, `V`, llaves, `LL`, con respecto a los índices x, `x` y `y`; todos los datos anteriores se obtienen como parámetros enviados por la función [`selectionSort`](#Función-selectionSortselg-vList-llList "Función selectionSort"). Fundamentalmente se genera un dato temporal, `temp`, que permite hacer el cambio de posiciones sin perder ninguno de los datos en las diferentes coordenadas.
+
+```python
+{
+
+    #Función que permite hacer los cambios respectivos en los arreglos de llaves y valores.        
+    def swap(self, V, LL, x, y):
+        #Asignación de un dato temporal para hacer el cambio
+        temp = [V[x], LL[x]]
+        #Se hace el cambio correspondiente
+        [V[x], LL[x]] = [V[y], LL[y]]
+        #Se devuelven los valores a su posición correcta
+        [V[y], LL[y]] = temp
+
+}
+```
+
 ### Función `appendText(self, cadena)`
 
+i. La función recibirá un parámetro de cadena de caracteres, `cadena`, desde la función [`ordena`](#Función-ordenaself-coor "Función ordena"), después de hacer la comparación si se debe escribir o no en el archivo de salida `data.txt`. Se abrirá el archivo en un modo de adición de líneas que se reconoce como `'a'`, se inserta la cadena recibida y se cierra el archivo.
+
+```python
+{
+
+    #Función para añadir los datos de la cadena al archivo
+    def appendText(self, cadena):
+        #Abrir el archivo en formato 'a' para añadir líneas sobre el archivo existente
+        f = open('Codigo/data.txt','a')
+        #Escribir la cadena en el archivo con un salto de línea
+        f.write('\n' + cadena)
+        #Cerrar el archivo
+        f.close()
+
+}
+```

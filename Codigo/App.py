@@ -101,17 +101,26 @@ class Captura_codigos:
 
             #Retorno de los arreglos ordenados
             return [vList, llList]
-            
+
+    #Función que permite hacer los cambios respectivos en los arreglos de llaves y valores.        
     def swap(self, V, LL, x, y):
+        #Asignación de un dato temporal para hacer el cambio
         temp = [V[x], LL[x]]
+        #Se hace el cambio correspondiente
         [V[x], LL[x]] = [V[y], LL[y]]
+        #Se devuelven los valores a su posición correcta
         [V[y], LL[y]] = temp
 
+    #Función para añadir los datos de la cadena al archivo
     def appendText(self, cadena):
+        #Abrir el archivo en formato 'a' para añadir líneas sobre el archivo existente
         f = open('Codigo/data.txt','a')
+        #Escribir la cadena en el archivo con un salto de línea
         f.write('\n' + cadena)
+        #Cerrar el archivo
         f.close()
 
+#Función principal
 def main():
 
     #Verifica si existe el archivo data.txt y de ser así lo borra.
