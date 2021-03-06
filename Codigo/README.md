@@ -12,11 +12,11 @@
 ### 4. [Inicio del programa](#Inicio-del-programa "Inicio del programa")
 ### 5. [Función `main()`](#Función-main "Función main")
 ### 6. [Clase `Captura_codigos`](#Clase-Captura_codigos "Captura códigos")
-###      a. [Función `read_barcodes(self, frame)`](#Función-read_barcodesself-frame "Función read_barcodes")
-###      b. [Función `ordena(self, coor)`](#Función-ordenaself-coor "Función ordena")
-###      c. [Función `selectionSort(self, vList, llList)`](#Función-selectionsortself-vlist-lllist "Función selectionSort")
-###      d. [Función `swap(self, V, LL, x, y)`](#Función-swapself-v-ll-x-y "Función swap")
-###      e. [Función `appendText(self, cadena)`](#Función-appendtextself-cadena "Función appenText")
+### a. [Función `read_barcodes(self, frame)`](#Función-read_barcodesself-frame "Función read_barcodes")
+### b. [Función `ordena(self, coor)`](#Función-ordenaself-coor "Función ordena")
+### c. [Función `selectionSort(self, vList, llList)`](#Función-selectionsortself-vlist-lllist "Función selectionSort")
+### d. [Función `swap(self, V, LL, x, y)`](#Función-swapself-v-ll-x-y "Función swap")
+### e. [Función `appendText(self, cadena)`](#Función-appendtextself-cadena "Función appenText")
 
 ---
 
