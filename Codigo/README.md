@@ -232,3 +232,31 @@ ii. El diccionario `coor_x` obtenido antes será dividido en dos arreglos `valor
         
 }
 ```
+
+iii. Lo siguiente es inicializar una cadena nueva que va a contener el renglón nuevo que se imprime en el archivo de salida, esta cadena se denomina `nueva_cadena`. Después de eso se crea un ciclo for que itera sobre una variable `i` desde 0 hasta la longitud del arreglo de claves ordenado, `len(ordenados[1])`, y va a concatenar la cadena con los datos cada uno de los datos en el arreglo mencionado, `ordenados[1][i]`. **Nota: Se usa el cast o cambio de tipo de dato a cadena de caracteres para no tener problemas con la concatenación, `str(ordenados[1][i])`.** Finalmente, con un ciclo de comparación if; entre la cadena que estaba almacenada en la instancia `cadena` y la cadena creada en la función `nueva_cadena`, si estas son iguales no se hace ningún procedimiento, si son diferentes se hace la cadena de la instancia igual a la cadena generada en la función y se hace un llamado a la función [`appendText`](#Función-appenTextselfcadena "Función appendText") con el parámetro `cadena` de la instancia que se imprimirá en el archivo de salida.
+
+```python
+{
+
+        #Se inicializa una nueva cadena que contiene la instrucción que se escribirá en el archivo posteriormente.
+        nueva_cadena = ""
+
+        #Se inicia un ciclo para construir la cadena que se va a imprimir en el archivo
+        #se obtienen cada una de las claves que serán concatenadas en una única cadena de texto
+        for i in range(len(ordenados[1])):
+            nueva_cadena = nueva_cadena +str(ordenados[1][i])+" "
+        
+        '''Se compara la cadena almacenada en el atributo de la instancia y la cadena construida en la función
+        si son iguales no se hace ningún proceso, si son diferentes se cambia la cadena de la instancia por
+        la cadena de la función y además se llama a la función que añade el texto al archivo existente.'''
+        if(nueva_cadena==self.cadena):
+            pass
+        else:
+            self.cadena = nueva_cadena
+            self.appendText(self.cadena)
+
+}
+```
+
+
+
