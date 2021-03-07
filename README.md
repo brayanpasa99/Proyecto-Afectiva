@@ -1,5 +1,5 @@
 # Proyecto Afectiva - Colaboración Grupo VIRTUS
-> Brayan Alexander Paredes Sánchez
+> Brayan Alexander Paredes Sánchez  
 > [Repositorio de GitHub:](https://github.com/brayanpasa99/Proyecto-Afectiva "Repositorio GitHub") https://github.com/brayanpasa99/Proyecto-Afectiva
 
 ## Archivo inicial
